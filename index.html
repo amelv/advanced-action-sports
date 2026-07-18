@@ -80,44 +80,8 @@
       --focus-outline: #9b6fcc;
       --tape-line: #7440a3;
       --new-tag: #9b6fcc;
-      --hero-overlay-start: rgba(116, 64, 163, 0.85);
-      --hero-overlay-end: rgba(116, 64, 163, 0.72);
-      --logo-space: 170px;
-    }
-
-    .theme-red {
-      --brand-primary: #d30c1f;
-      --brand-light: #e63646;
-      --brand-dark: #a30918;
-      --brand-rgb: 211, 12, 31;
-      --hero-bg: #d30c1f;
-      --btn-bg-start: #ce2f3d;
-      --btn-bg-end: #b81527;
-      --btn-hover-start: #e63646;
-      --btn-hover-end: #d30c1f;
-      --btn-active-start: #a30918;
-      --btn-active-end: #870713;
-      --nav-shop-bg-start: #ce2f3d;
-      --nav-shop-bg-end: #b81527;
-      --nav-shop-border: #8a0f1c;
-      --nav-shop-hover-start: #e63646;
-      --nav-shop-hover-end: #d30c1f;
-      --nav-shop-hover-border: #a30918;
-      --section-divider: rgba(211, 12, 31, 0.12);
-      --card-label-bg: rgba(211, 12, 31, 0.85);
-      --card-label-hover: rgba(230, 54, 70, 0.92);
-      --milsim-badge: #e63646;
-      --list-bullet: #d30c1f;
-      --location-card-hover-border: rgba(211, 12, 31, 0.3);
-      --social-hover-bg: rgba(211, 12, 31, 0.2);
-      --social-hover-border: rgba(211, 12, 31, 0.3);
-      --footer-link-hover: #e67a86;
-      --focus-outline: #e63646;
-      --tape-line: #d30c1f;
-      --new-tag: #e63646;
-      --hero-overlay-start: rgba(211, 12, 31, 0.85);
-      --hero-overlay-end: rgba(211, 12, 31, 0.72);
-      --logo-space: 320px;
+      --hero-overlay-start: rgba(0, 0, 0, 0.75);
+      --hero-overlay-end: rgba(0, 0, 0, 0.55);
     }
 
     /* ========== SECTION TRANSITIONS ========== */
@@ -169,8 +133,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 20px 20px 20px var(--logo-space);
-      transition: padding 0.3s ease;
+      padding: 20px 20px;
       max-width: 1200px;
       margin: 0 auto;
       position: relative;
@@ -178,15 +141,17 @@
     }
     .logo {
       position: absolute;
-      top: calc(100% - 20px);
+      top: 0;
       left: 20px;
       z-index: 3;
       display: flex;
       align-items: center;
       background: var(--brand-dark);
-      padding: 14px 16px 10px 10px;
-      border-radius: 4px;
-      border: 1px solid var(--brand-primary);
+      padding: 20px 20px 8px 12px;
+      border-radius: 0 0 4px 4px;
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: var(--brand-primary);
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.08),
         inset 0 -1px 0 rgba(0,0,0,0.15),
@@ -197,10 +162,6 @@
       height: 150px;
       width: auto;
     }
-    .logo .logo-old { display: none; }
-    .logo .logo-new { display: block; }
-    .theme-red .logo .logo-old { display: block; }
-    .theme-red .logo .logo-new { display: none; }
     nav {
       display: flex;
       gap: 5px;
@@ -632,46 +593,6 @@
       outline-offset: 2px;
     }
 
-    /* ========== THEME TOGGLE ========== */
-    .theme-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      display: flex;
-      background: #2e2f33;
-      border: 1px solid #4a4b50;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
-    }
-    .theme-toggle button {
-      padding: 10px 18px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s ease, color 0.15s ease;
-      color: #84868c;
-      background: transparent;
-    }
-    .theme-toggle button:hover {
-      color: #eceef0;
-      background: rgba(255,255,255,0.04);
-    }
-    .theme-toggle button.active {
-      color: #fff;
-    }
-    .theme-toggle .tog-purple.active {
-      background: #7440a3;
-    }
-    .theme-toggle .tog-red.active {
-      background: #d30c1f;
-    }
-
     @media (max-width: 900px) {
       .activity-grid { grid-template-columns: repeat(3, 1fr); }
       .milsim-inner { grid-template-columns: 1fr; }
@@ -684,8 +605,6 @@
       .hero-ctas { flex-direction: column; align-items: center; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
-      .theme-toggle { bottom: 10px; right: 10px; }
-      .theme-toggle button { padding: 8px 14px; font-size: 12px; }
     }
   </style>
 </head>
@@ -695,8 +614,7 @@
     <div class="noise-overlay"></div>
     <div class="header-inner">
       <a href="https://www.advancedactionsports.com" class="logo">
-        <img src="assets/images/logo-old.webp" srcset="assets/images/logo-old.webp 1x, assets/images/logo-old@2x.webp 2x" alt="Advanced Action Sports" width="261" height="132" class="logo-old">
-        <img src="assets/images/logo-new.webp" srcset="assets/images/logo-new.webp 1x, assets/images/logo-new@2x.webp 2x" alt="Advanced Action Sports" width="132" height="132" class="logo-new">
+        <img src="assets/images/logo-new-150@2x.webp" alt="Advanced Action Sports" width="300" height="300" class="logo-new">
       </a>
       <nav>
         <a href="https://www.advancedactionsports.com/virtual-reality">Virtual Reality</a>
@@ -841,11 +759,6 @@
     </div>
   </footer>
 
-  <div class="theme-toggle">
-    <button class="tog-purple active" data-theme="purple" aria-label="Switch to purple theme">Purple</button>
-    <button class="tog-red" data-theme="red" aria-label="Switch to red theme">Red</button>
-  </div>
-
 <script>
 (function() {
   var slides = document.querySelectorAll('.hero-slideshow img');
@@ -856,34 +769,6 @@
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
   }, 6000);
-})();
-
-(function() {
-  var toggle = document.querySelector('.theme-toggle');
-  if (!toggle) return;
-  var buttons = toggle.querySelectorAll('button');
-
-  buttons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var theme = this.getAttribute('data-theme');
-      buttons.forEach(function(b) { b.classList.remove('active'); });
-      this.classList.add('active');
-
-      if (theme === 'red') {
-        document.body.classList.add('theme-red');
-      } else {
-        document.body.classList.remove('theme-red');
-      }
-      localStorage.setItem('aas-theme', theme);
-    });
-  });
-
-  var saved = localStorage.getItem('aas-theme');
-  if (saved === 'red') {
-    document.body.classList.add('theme-red');
-    toggle.querySelector('.tog-red').classList.add('active');
-    toggle.querySelector('.tog-purple').classList.remove('active');
-  }
 })();
 </script>
 

@@ -477,8 +477,10 @@
     }
     .locations-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
+      max-width: 720px;
+      margin: 0 auto;
     }
     .location-card {
       background: linear-gradient(to bottom, #404145, #36373c);
@@ -733,25 +735,6 @@
           <img src="assets/images/vr-card.webp" alt="Virtual Reality" loading="lazy">
           <div class="card-label"><span>VR — Coming Soon</span></div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="milsim">
-    <div class="container">
-      <div class="milsim-inner">
-        <div class="milsim-text">
-          <h2><span class="new-badge">NEW!</span> Milsim event field</h2>
-          <p>The ultimate tactical experience! Advanced Action Milsim is nestled in the breathtaking landscapes of Granville, MA.</p>
-          <ul>
-            <li>400-acre field</li>
-            <li>19 miles of trails</li>
-          </ul>
-          <a href="https://www.advancedactionsports.com/milsim" class="btn">Get Milsim Event Tickets</a>
-        </div>
-        <div class="milsim-image">
-          <img src="assets/images/milsim.webp" alt="Milsim Event Field" loading="lazy">
-        </div>
       </div>
     </div>
   </section>

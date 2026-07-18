@@ -82,6 +82,7 @@
       --new-tag: #9b6fcc;
       --hero-overlay-start: rgba(116, 64, 163, 0.85);
       --hero-overlay-end: rgba(116, 64, 163, 0.72);
+      --logo-space: 170px;
     }
 
     .theme-red {
@@ -116,6 +117,7 @@
       --new-tag: #e63646;
       --hero-overlay-start: rgba(211, 12, 31, 0.85);
       --hero-overlay-end: rgba(211, 12, 31, 0.72);
+      --logo-space: 320px;
     }
 
     /* ========== SECTION TRANSITIONS ========== */
@@ -165,14 +167,21 @@
     }
     .header-inner {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 4px 20px;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px 20px 10px var(--logo-space);
+      transition: padding 0.3s ease;
       max-width: 1200px;
       margin: 0 auto;
-      height: 52px;
+      height: 70px;
       position: relative;
       z-index: 2;
+    }
+    .logo {
+      position: absolute;
+      bottom: -80px;
+      left: 20px;
+      z-index: 3;
     }
     .logo img {
       height: 150px;
@@ -185,7 +194,6 @@
     nav {
       display: flex;
       gap: 5px;
-      align-self: center;
     }
     nav a {
       padding: 11px 18px;

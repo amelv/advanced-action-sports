@@ -44,9 +44,9 @@
     ul { list-style: none; }
 
     .container {
-      max-width: 980px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
     section { padding: 60px 0; }
 
@@ -838,86 +838,69 @@
       gap: 8px;
     }
 
-    .updates-section {
+    .social-section {
       background: #2a2b30;
-      padding: 60px 0;
-      text-align: center;
+      padding: 80px 0;
     }
-    .updates-section h2 {
+    .social-section h2 {
       font-family: 'Oswald', sans-serif;
       font-weight: 600;
-      font-size: 32px;
+      font-size: 34px;
       letter-spacing: 0.02em;
       color: #c8cbd1;
-      margin-bottom: 30px;
+      text-align: center;
+      margin-bottom: 48px;
     }
-    .updates-fb-wrap {
-      display: flex;
-      justify-content: center;
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: start;
     }
-    .updates-fb-wrap iframe {
+    .social-fb iframe {
       border: none;
       overflow: hidden;
       border-radius: 4px;
-      max-width: 100%;
+      width: 100%;
+      min-height: 520px;
+      border: 1px solid #4a4b50;
     }
-
-    .video-section {
+    .social-video-card {
       background: #2e2f33;
-      padding: 60px 0;
+      border: 1px solid #4a4b50;
+      border-radius: 4px;
+      overflow: hidden;
     }
-    .video-section h2 {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 600;
-      font-size: 32px;
-      letter-spacing: 0.02em;
-      color: #c8cbd1;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .video-section .sub {
-      text-align: center;
-      color: #9a9ca3;
-      font-size: 15px;
-      max-width: 500px;
-      margin: 0 auto 30px;
-    }
-    .video-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      max-width: 800px;
-      margin: 0 auto;
-      align-items: center;
-    }
-    .video-layout iframe {
+    .social-video-card iframe {
+      display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
       border: none;
-      border-radius: 4px;
-      border: 1px solid #4a4b50;
     }
-    .video-info h3 {
+    .social-video-body {
+      padding: 24px;
+    }
+    .social-video-body h3 {
       font-family: 'Oswald', sans-serif;
       font-weight: 600;
-      font-size: 22px;
+      font-size: 20px;
       color: #c8cbd1;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .video-info p {
-      font-size: 15px;
+    .social-video-body p {
+      font-size: 14px;
       color: #9a9ca3;
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
-    .video-info .btn {
+    .social-video-body .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
 
-    @media (max-width: 700px) {
-      .video-layout { grid-template-columns: 1fr; }
+    @media (max-width: 800px) {
+      .social-grid { grid-template-columns: 1fr; gap: 32px; }
     }
 
     @media (max-width: 900px) {
@@ -934,10 +917,9 @@
       .menu-toggle { display: flex; grid-column: 3; justify-self: end; }
       .activity-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-ctas { flex-direction: column; align-items: center; }
-      .updates-section { padding: 40px 0; }
-      .updates-section h2 { font-size: 24px; }
-      .video-section { padding: 40px 0; }
-      .video-section h2 { font-size: 24px; }
+      .social-section { padding: 48px 0; }
+      .social-section h2 { font-size: 26px; margin-bottom: 32px; }
+      .social-grid { gap: 24px; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
     }
@@ -1072,27 +1054,21 @@
     </div>
   </section>
 
-  <!-- ===== Updates ===== -->
-  <section class="updates-section">
+  <!-- ===== Updates & Video ===== -->
+  <section class="social-section">
     <div class="container">
       <h2>Updates</h2>
-      <div class="updates-fb-wrap">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fadvancedactionsports&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Featured Video ===== -->
-  <section class="video-section">
-    <div class="container">
-      <h2>See the Action</h2>
-      <p class="sub">Gameplay, events, and behind-the-scenes from the field.</p>
-      <div class="video-layout">
-        <iframe src="https://www.youtube.com/embed/1pqAV1ebuRk" title="The WOLVERINE MTW owns any field... (Advanced Action Sports)" loading="lazy" allowfullscreen></iframe>
-        <div class="video-info">
-          <h3>The WOLVERINE MTW owns any field</h3>
-          <p>Gameplay footage from Advanced Action Sports in Webster, MA. Player testimonial featuring the Wolverine MTW airsoft rifle in action on the field.</p>
-          <a href="https://www.youtube.com/@advancedactionsports6153" target="_blank" rel="noreferrer noopener" class="btn">Subscribe on YouTube</a>
+      <div class="social-grid">
+        <div class="social-fb">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fadvancedactionsports&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div class="social-video-card">
+          <iframe src="https://www.youtube.com/embed/1pqAV1ebuRk" title="The WOLVERINE MTW owns any field... (Advanced Action Sports)" loading="lazy" allowfullscreen></iframe>
+          <div class="social-video-body">
+            <h3>The WOLVERINE MTW owns any field</h3>
+            <p>Gameplay footage from Advanced Action Sports in Webster, MA. Player testimonial featuring the Wolverine MTW airsoft rifle in action on the field.</p>
+            <a href="https://www.youtube.com/@advancedactionsports6153" target="_blank" rel="noreferrer noopener" class="btn">Subscribe on YouTube</a>
+          </div>
         </div>
       </div>
     </div>

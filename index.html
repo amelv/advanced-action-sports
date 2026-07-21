@@ -797,6 +797,240 @@
       padding: 16px 14px 8px;
     }
 
+    /* ========== SOCIAL EXPERIMENTS (LAB) ========== */
+    .exp-section {
+      padding: 60px 0;
+      border-top: 2px solid var(--section-divider);
+    }
+    .exp-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #c8cbd1;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .exp-section .exp-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #73757c;
+      border: 1px solid #4a4b50;
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .exp-section .exp-desc {
+      text-align: center;
+      color: #9a9ca3;
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto 30px;
+    }
+
+    /* Instagram Grid */
+    .exp-ig-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .exp-ig-grid a {
+      display: block;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 3px;
+      background: #35363b;
+      border: 1px solid #4a4b50;
+      position: relative;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .exp-ig-grid a:hover {
+      border-color: #65666c;
+      transform: scale(1.02);
+    }
+    .exp-ig-grid a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .exp-ig-grid a .exp-ig-icon {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 3px;
+      padding: 4px 6px;
+      font-size: 10px;
+      color: #c8cbd1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .exp-ig-cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* TikTok Strip */
+    .exp-tt-strip {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 10px 0 20px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .exp-tt-strip::-webkit-scrollbar {
+      height: 4px;
+    }
+    .exp-tt-strip::-webkit-scrollbar-track {
+      background: #35363b;
+      border-radius: 2px;
+    }
+    .exp-tt-strip::-webkit-scrollbar-thumb {
+      background: #55565c;
+      border-radius: 2px;
+    }
+    .exp-tt-card {
+      flex: 0 0 240px;
+      scroll-snap-align: start;
+      aspect-ratio: 9 / 16;
+      border-radius: 6px;
+      background: #35363b;
+      border: 1px solid #4a4b50;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .exp-tt-card:hover {
+      transform: translateY(-3px);
+      border-color: #65666c;
+    }
+    .exp-tt-card iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .exp-tt-card .exp-tt-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #73757c;
+      font-size: 13px;
+      text-align: center;
+      padding: 20px;
+    }
+    .exp-tt-card .exp-tt-placeholder svg {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 10px;
+      opacity: 0.4;
+    }
+    .exp-tt-cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* YouTube Spotlight */
+    .exp-yt-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .exp-yt-video {
+      aspect-ratio: 16 / 9;
+      background: #1a1b1e;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #4a4b50;
+    }
+    .exp-yt-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .exp-yt-info h3 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: #c8cbd1;
+      margin-bottom: 8px;
+    }
+    .exp-yt-info p {
+      font-size: 15px;
+      color: #9a9ca3;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* Facebook Plugin */
+    .exp-fb-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .exp-fb-wrap iframe {
+      border: none;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    /* UGC Concept */
+    .exp-ugc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .exp-ugc-grid a {
+      aspect-ratio: 1;
+      border-radius: 3px;
+      background: #35363b;
+      border: 1px solid #4a4b50;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #73757c;
+      font-size: 12px;
+      text-align: center;
+      transition: border-color 0.15s ease;
+    }
+    .exp-ugc-grid a:hover {
+      border-color: #65666c;
+    }
+    .exp-ugc-tag {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #9a9ca3;
+    }
+    .exp-ugc-tag strong {
+      color: var(--brand-light);
+    }
+
+    .exp-section .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .exp-ig-grid { grid-template-columns: repeat(2, 1fr); }
+      .exp-yt-layout { grid-template-columns: 1fr; }
+      .exp-ugc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 900px) {
       .activity-grid { grid-template-columns: repeat(3, 1fr); }
       .milsim-inner { grid-template-columns: 1fr; }
@@ -811,6 +1045,11 @@
       .menu-toggle { display: flex; grid-column: 3; justify-self: end; }
       .activity-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-ctas { flex-direction: column; align-items: center; }
+      .exp-yt-layout { grid-template-columns: 1fr; }
+      .exp-ig-grid { grid-template-columns: repeat(2, 1fr); }
+      .exp-ugc-grid { grid-template-columns: repeat(2, 1fr); }
+      .exp-section { padding: 40px 0; }
+      .exp-section h2 { font-size: 24px; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
     }
@@ -942,6 +1181,165 @@
       <a href="mailto:contact@advancedactionsports.com?subject=Information Request" class="btn" style="font-size: 20px; padding: 14px 34px;">
         EMAIL US
       </a>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENT A: Instagram Feed ===== -->
+  <section class="exp-section" style="background: #2e2f33;">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="exp-tag">Experiment A &mdash; Instagram Feed</span>
+      </div>
+      <h2>From the Feed</h2>
+      <p class="exp-desc">A grid of recent Instagram posts. Embeds auto-update when new content is posted.</p>
+      <div class="exp-ig-grid">
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/hero-slide-1.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/hero-slide-2.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/hero-slide-3.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/hero-slide-4.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/hero-slide-5.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <img src="assets/images/airsoft-card.webp" alt="" loading="lazy">
+          <span class="exp-ig-icon">IG</span>
+        </a>
+      </div>
+      <div class="exp-ig-cta">
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener" class="btn">Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENT B: TikTok Video Strip ===== -->
+  <section class="exp-section" style="background: #2a2b30;">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="exp-tag">Experiment B &mdash; TikTok Clips</span>
+      </div>
+      <h2>Recent Clips</h2>
+      <p class="exp-desc">A scrollable horizontal strip of TikTok videos. Auto-embeds latest posts from the account.</p>
+      <div class="exp-tt-strip">
+        <div class="exp-tt-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@advancedactionsports/video/7331199339664002335" style="max-width:100%;min-width:280px;margin:0;padding:0;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="exp-tt-card">
+          <div class="exp-tt-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+            Paste TikTok embed here
+          </div>
+        </div>
+        <div class="exp-tt-card">
+          <div class="exp-tt-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+            Paste TikTok embed here
+          </div>
+        </div>
+        <div class="exp-tt-card">
+          <div class="exp-tt-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+            Paste TikTok embed here
+          </div>
+        </div>
+        <div class="exp-tt-card">
+          <div class="exp-tt-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+            Paste TikTok embed here
+          </div>
+        </div>
+      </div>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+      <div class="exp-tt-cta">
+        <a href="https://www.tiktok.com/@advancedactionsports" target="_blank" rel="noreferrer noopener" class="btn">View on TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENT C: YouTube Spotlight ===== -->
+  <section class="exp-section" style="background: #2e2f33;">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="exp-tag">Experiment C &mdash; YouTube Video</span>
+      </div>
+      <h2>Watch Us in Action</h2>
+      <p class="exp-desc">Featured YouTube video with description. Swap in different videos over time.</p>
+      <div class="exp-yt-layout">
+        <div class="exp-yt-video">
+          <iframe src="https://www.youtube.com/embed/1pqAV1ebuRk" title="The WOLVERINE MTW owns any field... (Advanced Action Sports)" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="exp-yt-info">
+          <h3>The WOLVERINE MTW owns any field</h3>
+          <p>Gameplay footage from Advanced Action Sports in Webster, MA. Player testimonial featuring the Wolverine MTW airsoft rifle in action on the field.</p>
+          <a href="https://www.youtube.com/@advancedactionsports6153" target="_blank" rel="noreferrer noopener" class="btn">Subscribe on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENT D: Facebook Community ===== -->
+  <section class="exp-section" style="background: #2a2b30;">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="exp-tag">Experiment D &mdash; Facebook Feed</span>
+      </div>
+      <h2>Community Updates</h2>
+      <p class="exp-desc">Facebook Page Plugin showing recent posts, events, and visitor activity.</p>
+      <div class="exp-fb-wrap">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fadvancedactionsports&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIMENT E: UGC Photo Wall ===== -->
+  <section class="exp-section" style="background: #2e2f33;">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="exp-tag">Experiment E &mdash; Tagged Photos</span>
+      </div>
+      <h2>Tag Us in Your Photos</h2>
+      <p class="exp-desc">A wall of customer photos tagged on Instagram. Auto-updates whenever someone tags the field.</p>
+      <div class="exp-ugc-grid">
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+        <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">
+          <span>Your photo here</span>
+        </a>
+      </div>
+      <p class="exp-ugc-tag">Tag <strong>@advancedactionsports</strong> on Instagram to be featured</p>
     </div>
   </section>
 

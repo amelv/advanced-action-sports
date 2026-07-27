@@ -1,7 +1,3 @@
-# Old backup files
-index-clean.html
-index-enhanced.html
-index-enhanced.html.bak
-index-enhanced.html.bak2
-index-trimmed.html
-index.raw.html
+_site/
+*.bak
+*.bak2

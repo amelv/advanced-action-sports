@@ -1,0 +1,12 @@
+<section class="page-hero">
+    {% if include.hero_bg_img %}
+    <div class="page-hero-bg">
+      <img src="{{ site.baseurl }}/assets/images/{{ include.hero_bg_img }}" alt="{{ include.hero_bg_alt | default: '' }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-inner">
+      <h1>{{ include.hero_title }}</h1>
+      <a href="{{ include.hero_btn_url }}"{% if include.hero_btn_target == 'self' %}{% else %} target="_blank" rel="noreferrer noopener"{% endif %} class="btn btn-primary">{{ include.hero_btn_text }}</a>
+    </div>
+  </section>

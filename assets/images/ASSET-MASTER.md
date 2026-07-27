@@ -38,6 +38,16 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 |---|---|---|---|---|
 | `mom-shoot.png` | `paintball-woman-crouching-barricade` | 2.3MB | Woman paintball player crouching behind a barricade looking for an opening to shoot, bright colorful action shot | paintball page → gallery |
 
+## Gel Blaster
+
+| Filename | Size | Alt Text | Placement |
+|---|---|---|---|
+| `gel-blaster-hero.webp` | 1.1MB | Gel blaster player in full tactical gear aiming during a match | gel blaster page → hero + gallery |
+| `gel-blaster-action-portrait.webp` | 163KB | Close-up portrait of a gel blaster player in action | gel blaster page → portrait float |
+| `gel-blaster-player-aiming.webp` | 77KB | Gel blaster player aiming down the field during a match | gel blaster page → gallery |
+| `gel-blaster-team-action.webp` | 180KB | Gel blaster team moving together across the field | gel blaster page → gallery |
+| `gel-blaster-celebrating.webp` | 147KB | Gel blaster players celebrating after a match victory | gel blaster page → gallery |
+
 ## General
 
 | Current File | Proposed Name | Size | Alt Text | Placement |

@@ -1,7 +1,7 @@
 <section class="page-hero">
     {% if include.hero_bg_img %}
     <div class="page-hero-bg">
-      <img src="{{ site.baseurl }}/assets/images/{{ include.hero_bg_img }}" alt="{{ include.hero_bg_alt | default: '' }}" loading="lazy">
+      <img src="{{ site.baseurl }}/assets/images/{{ include.hero_bg_img }}" alt="{{ include.hero_bg_alt | default: '' }}" fetchpriority="high">
     </div>
     {% endif %}
     <div class="page-hero-overlay"></div>

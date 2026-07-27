@@ -10,5 +10,5 @@ defaults:
     values:
       layout: default
       robots: "noindex"
-      og_image: "assets/images/og-image.webp"
+      og_image: "/assets/images/og-image.webp"
       og_url: "https://www.advancedactionsports.com"

@@ -1,0 +1,19 @@
+{% assign images = include.images | default: page.gallery %}
+{% if images %}
+<div class="photo-gallery">
+  <div class="gallery-main">
+    <button class="gallery-arrow gallery-prev" aria-label="Previous">‹</button>
+    <a href="{{ site.baseurl }}/assets/images/{{ images[0].src }}">
+      <img src="{{ site.baseurl }}/assets/images/{{ images[0].src }}" alt="{{ images[0].alt }}" loading="lazy">
+    </a>
+    <button class="gallery-arrow gallery-next" aria-label="Next">›</button>
+  </div>
+  <div class="gallery-thumbs">
+    {% for img in images %}
+    <a href="{{ site.baseurl }}/assets/images/{{ img.src }}"{% if forloop.first %} class="active"{% endif %}>
+      <img src="{{ site.baseurl }}/assets/images/{{ img.src }}" alt="{{ img.alt }}" width="80" height="60" loading="lazy">
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

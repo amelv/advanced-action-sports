@@ -48,6 +48,13 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 | `gel-blaster-team-action.webp` | 180KB | Gel blaster team moving together across the field | gel blaster page → gallery |
 | `gel-blaster-celebrating.webp` | 147KB | Gel blaster players celebrating after a match victory | gel blaster page → gallery |
 
+## Nerf
+
+| Filename | Size | Alt Text | Placement |
+|---|---|---|---|
+| `nerf-kid-firing.webp` | Unsplash | Kid holding a Nerf blaster aiming and firing during a battle | nerf page → hero |
+| `nerf-kid-aiming-camera.webp` | Unsplash | Young kid aiming a Nerf blaster at the camera, cool and cheeky expression | nerf page → portrait float |
+
 ## General
 
 | Current File | Proposed Name | Size | Alt Text | Placement |

@@ -5,20 +5,20 @@ canonical: "https://www.advancedactionsports.com/paintball/"
 og_title: "PAINTBALL | Advanced Action Sports"
 og_description: "Paintball at Advanced Action Sports in Webster, Massachusetts. Fast-paced paintball battles, scenario games, and open play for all skill levels. Rentals available."
 robots: "noindex"
+gallery:
+  - src: paintball-splatter-action.webp
+    alt: "Bright colorful paintball action with paint splattering around a barricade as a player fires back"
+  - src: paintball-player-running.webp
+    alt: "Young paintball player running across the field in a moody action profile shot during a match"
+  - src: paintball-team-victory.webp
+    alt: "Paintball team grouped together in full gear waving markers and fists in victory celebration"
+  - src: paintball-team-portrait.webp
+    alt: "Paintball team posing together in full tactical gear for a group portrait"
+  - src: paintball-woman-crouching-barricade.webp
+    alt: "Woman paintball player crouching behind a barricade looking for an opening to shoot"
 ---
 
-<section class="page-hero">
-    <div class="page-hero-slideshow">
-      <img src="{{ site.baseurl }}/assets/images/paintball-splatter-action.webp" alt="Bright colorful paintball action with paint splattering around a barricade" class="active" fetchpriority="high">
-      <img src="{{ site.baseurl }}/assets/images/paintball-player-running.webp" alt="Young paintball player running across the field in a moody action profile shot" loading="lazy">
-      <img src="{{ site.baseurl }}/assets/images/paintball-team-victory.webp" alt="Paintball team celebrating together in full gear waving markers" loading="lazy">
-    </div>
-    <div class="page-hero-overlay"></div>
-    <div class="container page-hero-inner">
-      <h1>PAINTBALL</h1>
-      <a href="https://advancedactionsports.square.site/s/search?q=paintball%20admission" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Book Now</a>
-    </div>
-</section>
+{% include page-hero.html hero_title="PAINTBALL" hero_btn_url="https://advancedactionsports.square.site/s/search?q=paintball%20admission" hero_btn_text="Book Now" hero_bg_img="paintball-splatter-action.webp" hero_bg_alt="Bright colorful paintball action with paint splattering around a barricade as a player fires back at an opponent" %}
 
   <section class="page-actions">
     <div class="container">
@@ -45,6 +45,9 @@ robots: "noindex"
 
       <h2>Birthday Parties &amp; Groups</h2>
       <p>Paintball parties are our specialty. We handle everything: gear, paint, a private party host, and a dedicated field rotation so your group stays together. Add food, cake, and extended play time to build the ultimate party package. Corporate team-building groups love paintball for its communication-driven gameplay.</p>
+
+      <h2 style="clear: both;">Photos</h2>
+      {% include gallery.html %}
     </div>
   </section>
 

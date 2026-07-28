@@ -56,6 +56,15 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 | `milsim.webp` | 44K | Airsoft and milsim field at Moose Valley Recreational Area in Granville, MA | milsim page → float-right alongside Expansive Terrain |
 | `airsoft-arena-drone-overview.webp` | 4.1MB | Drone aerial view of the massive 400-acre airsoft and milsim field at Moose Valley | milsim page → hero background |
 
+## Memberships
+
+| Filename | Size | Alt Text | Placement |
+|---|---|---|---|
+| `airsoft-player-barricade-aiming.webp` | 436KB | Airsoft player with tactical helmet aiming over a barricade | memberships page → hero background |
+| `players-gearing-up.webp` | 665KB (jpeg src) | Airsoft and paintball players preparing for a match, gearing up and socializing | memberships page → float-right alongside intro text |
+
+
+
 ## Nerf
 
 | Filename | Size | Alt Text | Placement |

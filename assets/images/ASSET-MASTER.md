@@ -48,6 +48,12 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 | `gel-blaster-team-action.webp` | 180KB | Gel blaster team moving together across the field | gel blaster page → gallery |
 | `gel-blaster-celebrating.webp` | 147KB | Gel blaster players celebrating after a match victory | gel blaster page → gallery |
 
+## Milsim
+
+| Filename | Size | Alt Text | Placement |
+|---|---|---|---|
+| `moose-valley.jpeg` | — | The Moose Valley logo depicts a moose wearing tactical gear, holding a rifle | milsim page → hero background |
+
 ## Nerf
 
 | Filename | Size | Alt Text | Placement |

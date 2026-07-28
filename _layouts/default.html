@@ -114,6 +114,16 @@
       border-color: #63646a; color: #f4f5f7;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), inset 0 3px 6px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.3);
     }
+    nav a.active {
+      background: linear-gradient(to bottom, var(--btn-bg-start), var(--btn-bg-end));
+      border-color: var(--brand-dark); color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 1px 3px rgba(0,0,0,0.4);
+    }
+    nav a.active:hover {
+      background: linear-gradient(to bottom, var(--btn-hover-start), var(--btn-hover-end));
+      border-color: var(--brand-primary);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.4);
+    }
     nav .nav-shop {
       background: linear-gradient(to bottom, var(--nav-shop-bg-start), var(--nav-shop-bg-end));
       border-color: var(--nav-shop-border);
@@ -143,6 +153,7 @@
     }
     .nav-dropdown-menu a:hover { background: #4c4760; border-color: #656080; color: #f4f0fa; }
     .nav-dropdown-menu a:last-child { border-radius: 0 0 3px 3px; border-bottom-width: 1px; }
+    .nav-dropdown-menu a.active { background: #7440a3; border-color: #9b6fcc; color: #fff; }
 
     /* ========== BUTTONS ========== */
     .btn {
@@ -446,6 +457,8 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 1px 3px rgba(0,0,0,0.25);
     }
     .drawer-nav a:hover { background: linear-gradient(to bottom, #54555a, #434449); border-color: #63646a; color: #f4f5f7; }
+    .drawer-nav a.active { background: linear-gradient(to bottom, var(--btn-bg-start), var(--btn-bg-end)); border-color: var(--brand-dark); color: #fff; }
+    .drawer-nav a.active:hover { background: linear-gradient(to bottom, var(--btn-hover-start), var(--btn-hover-end)); border-color: var(--brand-primary); }
     .drawer-nav .drawer-shop { background: linear-gradient(to bottom, var(--nav-shop-bg-start), var(--nav-shop-bg-end)); border-color: var(--nav-shop-border); color: #fff; text-align: center; margin-top: 8px; }
     .drawer-nav .drawer-shop:hover { background: linear-gradient(to bottom, var(--nav-shop-hover-start), var(--nav-shop-hover-end)); border-color: var(--nav-shop-hover-border); }
     .drawer-nav .drawer-book { background: linear-gradient(to bottom, var(--btn-bg-start), var(--btn-bg-end)); border-color: var(--brand-dark); color: #fff; text-align: center; font-size: 18px; padding: 14px; margin-bottom: 8px; }

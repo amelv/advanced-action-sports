@@ -60,8 +60,10 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 
 | Filename | Size | Alt Text | Placement |
 |---|---|---|---|
-| `airsoft-player-barricade-aiming.webp` | 436KB | Airsoft player with tactical helmet aiming over a barricade | memberships page → hero background |
-| `players-gearing-up.webp` | 665KB (jpeg src) | Airsoft and paintball players preparing for a match, gearing up and socializing | memberships page → float-right alongside intro text |
+| `airsoft-player-barricade-aiming.webp` | 436KB | Airsoft player with tactical helmet aiming over a barricade | not currently used (was membership hero) |
+| `players-gearing-up.webp` | 665KB (jpeg src) | Airsoft and paintball players preparing for a match, gearing up and socializing | memberships page → full-width content image |
+| `airsoft-player-celebrating.webp` | 490KB (jpeg src) | Airsoft player raising gun and fist in the air celebrating a win | memberships page → hero background |
+| `airsoft-indoor-laser-peek.webp` | 404KB (jpeg src) | Indoor arena corridor with player aiming around a corner, laser beams visible across the room | memberships page → float-right alongside intro text |
 
 
 

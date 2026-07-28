@@ -66,6 +66,14 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 | `airsoft-player-celebrating.webp` | 490KB (jpeg src) | Airsoft player raising gun and fist in the air celebrating a win | memberships page → float-right alongside intro text |
 | `airsoft-woman-geared-up.webp` | — | Geared-up woman airsoft player, cool confident shot | not currently used |
 
+## Event Space
+
+| Filename | Size | Alt Text | Placement |
+|---|---|---|---|
+| `event-space-2.webp` | 4032x3024 (jpeg src) | Spacious 32,000 sq ft event venue with play field and versatile layout | event-space page → hero background |
+| `event-space-1.webp` | 2016x1512 (jpeg src) | Our large event space configured in multiple ways for your event | event-space page → full-width content image |
+| `event-vr-2.webp` | 2016x1512 (jpeg src) | Virtual reality gaming setup at Advanced Action Sports event space | event-space page → full-width content image |
+
 
 
 ## Nerf

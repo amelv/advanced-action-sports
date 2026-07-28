@@ -2,22 +2,15 @@
     {% assign page_path = page.url | remove_first: '/' | split: '/' | first %}
     <div class="noise-overlay"></div>
     <div class="header-inner">
-      <nav class="nav-left">
-        <a href="{{ site.baseurl }}/airsoft/"{% if page_path == 'airsoft' %} class="active"{% endif %}>Airsoft</a>
-        <a href="{{ site.baseurl }}/paintball/"{% if page_path == 'paintball' %} class="active"{% endif %}>Paintball</a>
-        <div class="nav-dropdown">
-          <a href="#">More</a>
-          <div class="nav-dropdown-menu">
-            <a href="{{ site.baseurl }}/gel-blaster/"{% if page_path == 'gel-blaster' %} class="active"{% endif %}>Gel-Blaster</a>
-            <a href="{{ site.baseurl }}/nerf-battles/"{% if page_path == 'nerf-battles' %} class="active"{% endif %}>Nerf</a>
-            <a href="{{ site.baseurl }}/milsim/"{% if page_path == 'milsim' %} class="active"{% endif %}>Milsim</a>
-          </div>
-        </div>
-      </nav>
       <a href="{{ site.baseurl }}/" class="logo">
         <img src="{{ site.baseurl }}/assets/images/logo-new-150@2x.webp" alt="Advanced Action Sports" width="300" height="300">
       </a>
-      <nav class="nav-right">
+      <nav class="header-nav">
+        <a href="{{ site.baseurl }}/airsoft/"{% if page_path == 'airsoft' %} class="active"{% endif %}>Airsoft</a>
+        <a href="{{ site.baseurl }}/paintball/"{% if page_path == 'paintball' %} class="active"{% endif %}>Paintball</a>
+        <a href="{{ site.baseurl }}/gel-blaster/"{% if page_path == 'gel-blaster' %} class="active"{% endif %}>Gel-Blaster</a>
+        <a href="{{ site.baseurl }}/nerf-battles/"{% if page_path == 'nerf-battles' %} class="active"{% endif %}>Nerf</a>
+        <a href="{{ site.baseurl }}/milsim/"{% if page_path == 'milsim' %} class="active"{% endif %}>Milsim</a>
         <div class="nav-dropdown">
           <a href="#">Visit</a>
           <div class="nav-dropdown-menu">

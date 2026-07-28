@@ -63,8 +63,8 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 | `airsoft-player-barricade-aiming.webp` | 436KB | Airsoft player with tactical helmet aiming over a barricade | not currently used |
 | `players-gearing-up.webp` | 665KB (jpeg src) | Airsoft and paintball players preparing for a match, gearing up and socializing | memberships page → full-width content image |
 | `airsoft-outdoor-advancing.webp` | — | Airsoft players slowly advancing together outdoors in a gritty tactical formation | memberships page → hero background |
-| `airsoft-player-celebrating.webp` | 490KB (jpeg src) | Airsoft player raising gun and fist in the air celebrating a win | memberships page → float-right alongside item 3 |
-| `airsoft-woman-geared-up.webp` | — | Geared-up woman airsoft player, cool confident shot | memberships page → float-left alongside item 8 |
+| `airsoft-player-celebrating.webp` | 490KB (jpeg src) | Airsoft player raising gun and fist in the air celebrating a win | memberships page → float-right alongside intro text |
+| `airsoft-woman-geared-up.webp` | — | Geared-up woman airsoft player, cool confident shot | not currently used |
 
 
 

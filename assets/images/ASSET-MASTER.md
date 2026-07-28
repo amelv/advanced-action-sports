@@ -52,7 +52,9 @@ Variants: `[name].jpg` (original), `[name].webp` (optimized WebP), `[name]-card.
 
 | Filename | Size | Alt Text | Placement |
 |---|---|---|---|
-| `moose-valley.jpeg` | — | The Moose Valley logo depicts a moose wearing tactical gear, holding a rifle | milsim page → hero background |
+| `moose-valley.jpeg` | — | The Moose Valley logo depicts a moose wearing tactical gear, holding a rifle | milsim page → content area, centered logo |
+| `milsim.webp` | 44K | Airsoft and milsim field at Moose Valley Recreational Area in Granville, MA | milsim page → float-right alongside Expansive Terrain |
+| `airsoft-arena-drone-overview.webp` | 4.1MB | Drone aerial view of the massive 400-acre airsoft and milsim field at Moose Valley | milsim page → hero background |
 
 ## Nerf
 

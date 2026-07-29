@@ -9,10 +9,11 @@
   <link rel="canonical" href="{{ page.canonical }}">
   <meta property="og:title" content="{{ page.og_title | default: page.title }}">
   <meta property="og:description" content="{{ page.og_description | default: page.description }}">
-  <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-image.webp' | relative_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-image.avif' | relative_url }}">
   <meta property="og:url" content="{{ page.og_url | default: 'https://www.advancedactionsports.com' }}">
   <meta property="og:type" content="website">
   <link rel="icon" sizes="32x32" href="{{ '/assets/images/favicon.webp' | relative_url }}">
+  <link rel="icon" sizes="16x16" href="{{ '/assets/images/favicon-16x16.webp' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/images/favicon.webp' | relative_url }}" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,7 +263,7 @@
     }
     .locations::before {
       content: ''; position: absolute; inset: 0; z-index: 0;
-      background: url("{{ 'assets/images/airsoft-arena-drone-overview.webp' | relative_url }}") center/cover no-repeat;
+      background: url("{{ 'assets/images/airsoft-arena-drone-overview.avif' | relative_url }}") center/cover no-repeat;
       opacity: 0.2;
     }
     .locations > .container { position: relative; z-index: 1; }

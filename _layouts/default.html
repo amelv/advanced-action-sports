@@ -214,6 +214,8 @@
       background: linear-gradient(to bottom, #ffffff, #e3e1dd);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 3px 6px rgba(255,255,255,0.1), 0 3px 12px rgba(0,0,0,0.3);
     }
+    .hero .btn svg { width: 20px; height: 20px; stroke: #7440a3; vertical-align: middle; margin-right: 6px; margin-top: -2px; }
+    .hero .btn-primary svg { stroke: #fff; }
     .hero .btn-primary {
       background: linear-gradient(to bottom, var(--btn-bg-start), var(--btn-bg-end));
       border-color: var(--brand-dark);
@@ -423,6 +425,20 @@
     .footer-bottom .copyright { font-size: 14px; color: #b4b7bc; letter-spacing: 0.02em; }
     .footer-bottom .copyright a { color: #c4c7cc; }
     .footer-bottom .copyright a:hover { color: var(--footer-link-hover); }
+    .footer-buttons { display: flex; gap: 8px; }
+    .footer-buttons .btn {
+      background: linear-gradient(to bottom, #3a3b40, #2e2f34);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #d8dadf; font-size: 13px; padding: 6px 14px; border-radius: 4px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .footer-buttons .btn:hover {
+      background: linear-gradient(to bottom, #44454a, #38393e);
+      border-color: #7440a3; color: #f4f5f7;
+    }
+    .footer-buttons .btn svg { stroke: #b88ae0; }
+    .footer-buttons .btn:hover svg { stroke: #c7a4e0; }
     .footer-jobs-link {
       color: #b88ae0 !important; font-weight: 700;
       border-bottom: 1px solid #7440a3; padding-bottom: 1px;
@@ -440,6 +456,186 @@
     .social-links img { width: 16px; height: 16px; }
 
     a:focus-visible, button:focus-visible { outline: 2px solid var(--focus-outline); outline-offset: 2px; }
+
+    /* ========== VR PAGE ========== */
+    .vr-section-escape {
+      background: url("{{ 'assets/images/tex-carbon-fibre.png' | relative_url }}") repeat, #35363b;
+      border-top: 1px solid rgba(116,64,163,0.15);
+    }
+    .vr-section-pricing {
+      background: url("{{ 'assets/images/tex-asfalt-dark.png' | relative_url }}") repeat, #35363b;
+      border-top: 1px solid rgba(116,64,163,0.15);
+    }
+    .vr-intro { text-align: center; max-width: 800px; margin: 0 auto 48px; }
+    .vr-intro .vr-tagline {
+      font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 400;
+      color: #b88ae0; letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .vr-intro h2 { font-size: clamp(42px, 6vw, 64px); border-left: none; padding-left: 0; text-align: center; }
+    .vr-intro p { font-size: 20px; color: #f0f1f3; line-height: 1.7; margin-bottom: 10px; }
+    .vr-section-heading { display: flex; flex-direction: column; align-items: center; margin-bottom: 32px; }
+    .vr-section-heading h2 { border-left: none; padding-left: 0; text-align: center; }
+    .vr-section-heading p { text-align: center; max-width: 640px; color: #eceef0; font-size: 19px; }
+
+    .escape-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; }
+    .escape-card {
+      display: flex; flex-direction: row; cursor: pointer;
+      background: url("{{ 'assets/images/tex-gun-metal.png' | relative_url }}") repeat, #3f4046;
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 5px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+      overflow: hidden; position: relative; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .escape-card:hover { border-color: rgba(155,111,204,0.3); box-shadow: 0 3px 16px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06); }
+    .escape-card::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, #7440a3, #9b6fcc);
+    }
+    .escape-card-body { flex: 1; padding: 20px 22px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+    .escape-card-body h3 {
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 22px;
+      color: #f4f5f7; letter-spacing: 0.04em; margin-bottom: 2px;
+    }
+    .escape-card-body .escape-meta {
+      display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      color: #c7a4e0; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .escape-card-body p {
+      font-size: 18px; color: #eceef0; line-height: 1.6; margin: 0;
+      display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .escape-card-fig {
+      flex: 1; position: relative; overflow: hidden; aspect-ratio: 2/3;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .escape-card-fig::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none;
+    }
+    .escape-card-fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .vr-games-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 8px; }
+    .vr-game-card {
+      display: flex; flex-direction: row; cursor: pointer;
+      background: url("{{ 'assets/images/tex-gun-metal.png' | relative_url }}") repeat, #3f4046;
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 5px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+      overflow: hidden; position: relative; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .vr-game-card:hover { border-color: rgba(155,111,204,0.3); box-shadow: 0 3px 16px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06); }
+    .vr-game-card::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, #7440a3, #9b6fcc);
+    }
+    .vr-game-card-body { flex: 1; padding: 20px 22px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+    .vr-game-card-body h3 {
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 22px;
+      color: #f4f5f7; letter-spacing: 0.04em; margin-bottom: 2px;
+    }
+    .vr-game-card-body .game-meta {
+      display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      color: #c7a4e0; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .vr-game-card-body p {
+      font-size: 18px; color: #eceef0; line-height: 1.6; margin: 0;
+      display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .vr-game-card-fig {
+      flex: 1; position: relative; overflow: hidden; aspect-ratio: 2/3;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .vr-game-card-fig::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none;
+    }
+    .vr-game-card-fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .vr-pricing-note {
+      background: linear-gradient(135deg, rgba(116,64,163,0.18) 0%, rgba(116,64,163,0.08) 100%);
+      border: 1px solid rgba(116,64,163,0.25); border-radius: 5px;
+      padding: 24px 28px; margin: 32px 0 20px; text-align: center;
+    }
+    .vr-pricing-note p { font-size: 21px; color: #f7f8f8; margin: 0; }
+    .vr-pricing-note strong { color: #d4b8f0; }
+
+    .vr-section-divider {
+      width: 60px; height: 3px; background: linear-gradient(90deg, #7440a3, #9b6fcc);
+      margin: 0 auto 24px; border-radius: 2px;
+    }
+
+    .vr-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.92); justify-content: center; align-items: center;
+      padding: 40px;
+    }
+    .vr-overlay.open { display: flex; }
+    .vr-overlay-inner {
+      display: flex; flex-direction: row; max-width: 900px; width: 100%;
+      max-height: 80vh; background: #2d2e33; border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6); overflow: hidden;
+      position: relative;
+    }
+    .vr-overlay-fig {
+      flex: 0 0 45%; position: relative; overflow: hidden;
+    }
+    .vr-overlay-fig img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .vr-overlay-body {
+      flex: 1; padding: 32px 36px; overflow-y: auto; display: flex;
+      flex-direction: column; justify-content: center;
+    }
+    .vr-overlay-body h2 {
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 28px;
+      color: #f4f5f7; letter-spacing: 0.04em; margin-bottom: 4px; border: none; padding: 0;
+    }
+    .vr-overlay-body .vr-overlay-meta {
+      font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+      color: #c7a4e0; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .vr-overlay-body p {
+      font-size: 19px; color: #f0f1f3; line-height: 1.7; margin: 0;
+    }
+    .vr-overlay-close {
+      position: absolute; top: 12px; right: 12px; z-index: 10;
+      background: rgba(0,0,0,0.5); color: #f7f8f8; border: none;
+      font-size: 1.5rem; width: 40px; height: 40px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .vr-overlay-close:hover { background: rgba(0,0,0,0.8); }
+    .vr-overlay-prev, .vr-overlay-next {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
+      background: rgba(0,0,0,0.5); color: #f7f8f8; border: none;
+      font-size: 2rem; width: 44px; height: 44px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .vr-overlay-prev:hover, .vr-overlay-next:hover { background: rgba(0,0,0,0.8); }
+    .vr-overlay-prev { left: 12px; }
+    .vr-overlay-next { right: 12px; }
+    @media (max-width: 700px) {
+      .vr-overlay { padding: 20px; }
+      .vr-overlay-inner { flex-direction: column; max-height: 90vh; }
+      .vr-overlay-fig { flex: 0 0 200px; }
+      .vr-overlay-body { padding: 20px 24px; }
+      .vr-overlay-body h2 { font-size: 22px; }
+      .vr-overlay-body p { font-size: 16px; }
+    }
+
+    @media (max-width: 800px) {
+      .escape-grid { grid-template-columns: 1fr; }
+      .vr-games-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .escape-card-body, .vr-game-card-body { padding: 14px 16px; }
+      .escape-card-body h3, .vr-game-card-body h3 { font-size: 19px; }
+      .escape-card-body p, .vr-game-card-body p { font-size: 15px; }
+      .vr-game-card-body .game-meta { font-size: 12px; }
+    }
 
     /* ========== MOBILE ========== */
     .menu-toggle {
@@ -587,6 +783,60 @@
   });
   if (prev) prev.addEventListener('click', function() { show(current - 1); });
   if (next) next.addEventListener('click', function() { show(current + 1); });
+  ol.addEventListener('click', function(e) { if (e.target === ol) closeOverlay(); });
+  olClose.addEventListener('click', closeOverlay);
+  olPrev.addEventListener('click', function() { openOverlay(current - 1); });
+  olNext.addEventListener('click', function() { openOverlay(current + 1); });
+  document.addEventListener('keydown', function(e) {
+    if (!ol.classList.contains('open')) return;
+    if (e.key === 'Escape') closeOverlay();
+    if (e.key === 'ArrowLeft') openOverlay(current - 1);
+    if (e.key === 'ArrowRight') openOverlay(current + 1);
+  });
+})();
+(function() {
+  var cards = document.querySelectorAll('.escape-card, .vr-game-card');
+  if (!cards.length) return;
+  var items = [];
+  cards.forEach(function(c) {
+    var img = c.getAttribute('data-vr-img');
+    var title = c.getAttribute('data-vr-title');
+    var meta = c.getAttribute('data-vr-meta');
+    var desc = c.getAttribute('data-vr-desc');
+    if (!img || !title) return;
+    items.push({ img: img, title: title, meta: meta, desc: desc });
+  });
+  if (!items.length) return;
+  var current = 0;
+  var ol = document.createElement('div');
+  ol.className = 'vr-overlay';
+  ol.innerHTML = '<button class="vr-overlay-close">&times;</button><button class="vr-overlay-prev">&#8249;</button><div class="vr-overlay-inner"><div class="vr-overlay-fig"><img alt=""></div><div class="vr-overlay-body"><h2></h2><div class="vr-overlay-meta"></div><p></p></div></div><button class="vr-overlay-next">&#8250;</button>';
+  document.body.appendChild(ol);
+  var olImg = ol.querySelector('.vr-overlay-fig img');
+  var olTitle = ol.querySelector('.vr-overlay-body h2');
+  var olMeta = ol.querySelector('.vr-overlay-meta');
+  var olDesc = ol.querySelector('.vr-overlay-body p');
+  var olClose = ol.querySelector('.vr-overlay-close');
+  var olPrev = ol.querySelector('.vr-overlay-prev');
+  var olNext = ol.querySelector('.vr-overlay-next');
+  function openOverlay(idx) {
+    current = (idx + items.length) % items.length;
+    var item = items[current];
+    olImg.src = item.img;
+    olImg.alt = item.title;
+    olTitle.textContent = item.title;
+    olMeta.textContent = item.meta;
+    olDesc.textContent = item.desc;
+    ol.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeOverlay() {
+    ol.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  cards.forEach(function(c, i) {
+    c.addEventListener('click', function() { openOverlay(i); });
+  });
   ol.addEventListener('click', function(e) { if (e.target === ol) closeOverlay(); });
   olClose.addEventListener('click', closeOverlay);
   olPrev.addEventListener('click', function() { openOverlay(current - 1); });

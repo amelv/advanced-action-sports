@@ -3,6 +3,8 @@ description: Airsoft, Paintball, VR & more in Massachusetts
 url: "https://alexamelvin.com/advanced-action-sports"
 baseurl: "/advanced-action-sports"
 theme: null
+exclude:
+  - assets/images/reference
 markdown: kramdown
 permalink: pretty
 defaults:

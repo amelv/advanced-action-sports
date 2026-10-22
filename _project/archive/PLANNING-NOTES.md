@@ -1,4 +1,7 @@
-# Migration Planning Notes — Advanced Action Sports
+# Archived Migration Planning Notes — Advanced Action Sports
+
+> Historical reference from August 2026. Current website work is tracked in
+> `_project/PROJECT-PLAN.md`. Personal account details have been removed.
 
 Working notes captured during planning. **STATUS: PLANNING PHASE — do NOT build site
 pages or change any live config yet.** The full operational plan lives in `MIGRATION-PLAN.md`;
@@ -22,8 +25,8 @@ Last updated: 2026-08-11
 
 ## Open items (need client input)
 
-1. **Registrant contact is Ian Costello / The Forge Companies** —
-   **RESOLVED 2026-08-11**: client confirmed Ian is an **old business partner, harmless**.
+1. **Registrant contact was a former business partner** —
+   **RESOLVED 2026-08-11**: client confirmed this was expected.
    **Strategy: do NOT change the registrant** (avoids the 60-day ICANN lock). Instead coordinate
    with the partner to forward the EPP code when the Wix transfer starts, then fix the registrant
    to the business *after* the Porkbun transfer lands. Fallback if the partner is unhelpful:
@@ -133,5 +136,5 @@ content.
 
 ## Immediate next step (blocks everything else)
 
-Get access to `contact@theforgecompanies.net` (or establish who reads it) so the Wix → Porkbun
-EPP transfer can start. Until then, planning continues but no domain action happens.
+Confirm the current registrant contact can receive the EPP transfer message before starting the
+Wix → Porkbun transfer. Until then, planning continues but no domain action happens.

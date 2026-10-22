@@ -5,6 +5,7 @@ baseurl: ""
 theme: null
 exclude:
   - assets/images/reference
+  - _project
 markdown: kramdown
 permalink: pretty
 defaults:

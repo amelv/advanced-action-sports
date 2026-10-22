@@ -1,4 +1,7 @@
-# Migration Plan: Advanced Action Sports — Wix → GitHub Pages + Porkbun
+# Archived Migration Plan: Advanced Action Sports — Wix → GitHub Pages + Porkbun
+
+> Historical reference from August 2026. Current website work is tracked in
+> `_project/PROJECT-PLAN.md`. Personal account details have been removed.
 
 Last updated: 2026-08-11
 
@@ -16,7 +19,7 @@ self-service nameserver changes, so DNS control requires leaving Wix).
 | Registrar | Wix.com Ltd. (registered 2021-02-02, expires 2027-02-02) |
 | DNS | `ns14.wixdns.net` / `ns15.wixdns.net` (Wix; NS changes not available self-service) |
 | Hosting | Resolves to Wix CDN (185.230.63.x) |
-| Registrant contact | Ian Costello — The Forge Companies, `contact@theforgecompanies.net`, 52 Lawrence Dr Apt 404, Lowell MA 01854 (public WHOIS; appears to be a previous contractor — **confirm with client before starting transfer**) |
+| Registrant contact | Former business partner; confirm the current business contact before starting a transfer |
 | Domain status | `clientTransferProhibited` / `clientUpdateProhibited` (registrar lock — removed during transfer-away) |
 | Email — MX (inbound) | Google: `aspmx.l.google.com` (10), `alt1` (20), `alt2` (30), `alt3` (40), `alt4` (50) |
 | Email — SPF | `v=spf1 include:spf.protection.outlook.com -all` (keep verbatim until mail confirmed) |
@@ -45,8 +48,7 @@ reproduced/rolled back.
 
 1. **Save the DNS snapshot** (already in this doc — keep it updated if Wix DNS changes).
 2. **Email-SKU check + registrant contact check (do these first)**:
-   - Registrant is **Ian Costello / The Forge Companies** — client confirmed this is an **old
-     business partner, harmless** (contact: `contact@theforgecompanies.net`).
+   - Registrant was a former business partner. Confirm the current business contact before transfer.
    - **Strategy: do NOT change the registrant** (avoids the 60-day lock). Coordinate with the
      partner in advance: they forward the EPP code to us when the transfer starts, then we move
      the registrant to the business *after* the Porkbun transfer completes.

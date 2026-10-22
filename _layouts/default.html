@@ -43,7 +43,15 @@
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
     ul { list-style: none; }
+
+    .skip-link {
+      position: fixed; top: 8px; left: 8px; z-index: 10000;
+      padding: 10px 16px; border-radius: 3px; background: #fff; color: #222;
+      transform: translateY(-150%); transition: transform 0.15s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
     section { padding: 60px 0; }
@@ -103,16 +111,17 @@
     nav { display: flex; gap: 5px; }
     .nav-left { justify-content: flex-end; align-self: start; margin-top: 28px; }
     .nav-right { justify-content: flex-start; align-self: start; margin-top: 28px; }
-    nav a {
+    nav a, .nav-dropdown-toggle {
       padding: 11px 18px; font-size: 17px; font-weight: 700;
       letter-spacing: 0.04em; text-transform: uppercase; color: #e2e4e8;
       border-radius: 3px; white-space: nowrap;
       background: linear-gradient(to bottom, #4a4b50, #3a3b40);
       border: 1px solid #55565c;
+      cursor: pointer;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), inset 0 3px 6px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.25);
       transition: background 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, color 0.3s ease;
     }
-    nav a:hover {
+    nav a:hover, .nav-dropdown-toggle:hover {
       background: linear-gradient(to bottom, #54555a, #434449);
       border-color: #63646a; color: #f4f5f7;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), inset 0 3px 6px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.3);
@@ -140,14 +149,16 @@
     }
     .nav-shop svg { display: inline-block; vertical-align: middle; margin-right: 6px; margin-top: -2px; }
     .nav-dropdown { position: relative; display: flex; }
-    .nav-dropdown > a::after {
+    .nav-dropdown-toggle::after {
       content: ''; display: inline-block; width: 0; height: 0;
       margin-left: 6px; vertical-align: middle;
       border-top: 5px solid currentColor;
       border-right: 4px solid transparent; border-left: 4px solid transparent;
     }
     .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 210px; z-index: 200; }
-    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu { display: block; }
     .nav-dropdown-menu a {
       display: block; padding: 10px 16px; font-size: 15px; white-space: nowrap;
       background: #3f3b50; border-color: #555070; color: #e8e4f2;
@@ -366,6 +377,22 @@
     .pricing-item-price { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 42px; color: #f4f5f7; letter-spacing: 0.02em; line-height: 1.1; }
     .pricing-item-desc { font-size: 16px; color: #c0c3ca; margin-top: 8px; }
 
+    .ticket-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 32px 0; }
+    .ticket-card {
+      display: flex; flex-direction: column; align-items: flex-start;
+      background: linear-gradient(to bottom, #414249, #37383e);
+      border: 1px solid #55565c; border-top: 3px solid var(--brand-primary);
+      border-radius: 5px; padding: 28px; box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    }
+    .ticket-card h2 { font-size: clamp(30px, 4vw, 42px); }
+    .ticket-card p { font-size: 18px; }
+    .ticket-card .btn { margin-top: auto; }
+    .ticket-note {
+      margin-top: 28px; padding: 22px 24px; border-left: 4px solid var(--brand-primary);
+      background: rgba(255,255,255,0.035); border-radius: 0 4px 4px 0;
+    }
+    .ticket-note p { margin: 0; font-size: 18px; }
+
     .gallery-main { position: relative; display: flex; align-items: center; justify-content: center; background: #383940; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
     .gallery-main img { width: 100%; max-height: 450px; object-fit: contain; display: block; }
     .gallery-main a { display: flex; width: 100%; }
@@ -485,7 +512,8 @@
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
     }
     .social-links a:hover { background: var(--social-hover-bg); border-color: var(--social-hover-border); }
-    .social-links img { width: 24px; height: 24px; }
+    .social-links img, .social-links svg { width: 24px; height: 24px; }
+    .social-links svg { fill: currentColor; }
 
     a:focus-visible, button:focus-visible { outline: 2px solid var(--focus-outline); outline-offset: 2px; }
 
@@ -721,13 +749,17 @@
       .locations-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
+    @media (max-width: 1100px) {
+      .header-inner > nav { display: none; }
+      .header-inner { grid-template-columns: 1fr auto 1fr; }
+      .menu-toggle { display: flex; grid-column: 3; justify-self: end; }
+    }
     @media (max-width: 600px) {
-      nav { display: none; }
       .header-inner { grid-template-columns: 1fr auto 1fr; }
       .logo img { width: 160px; }
-      .menu-toggle { display: flex; grid-column: 3; justify-self: end; }
       .activity-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-ctas { flex-direction: column; align-items: center; }
+      .ticket-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
       .content-row, .content-row.reversed { flex-direction: column; }
@@ -737,9 +769,11 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   {% include header.html %}
 
-  <main>{{ content }}</main>
+  <main id="main-content" tabindex="-1">{{ content }}</main>
 
   {% include footer.html %}
   {% include drawer.html %}
@@ -750,11 +784,55 @@
   var drawer = document.getElementById('drawer');
   var overlay = document.getElementById('drawer-overlay');
   var close = document.getElementById('drawer-close');
-  function open() { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  function open() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    drawer.removeAttribute('inert');
+    drawer.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    close.focus();
+  }
+  function closeDrawer(returnFocus) {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    drawer.setAttribute('inert', '');
+    drawer.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (returnFocus) toggle.focus();
+  }
   toggle.addEventListener('click', open);
-  close.addEventListener('click', closeDrawer);
-  overlay.addEventListener('click', closeDrawer);
+  close.addEventListener('click', function() { closeDrawer(true); });
+  overlay.addEventListener('click', function() { closeDrawer(true); });
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(true);
+  });
+})();
+(function() {
+  var dropdown = document.querySelector('.nav-dropdown');
+  if (!dropdown) return;
+  var toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  function closeDropdown() {
+    dropdown.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  toggle.addEventListener('click', function() {
+    var open = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  dropdown.addEventListener('focusout', function(event) {
+    if (!dropdown.contains(event.relatedTarget)) closeDropdown();
+  });
+  document.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && dropdown.classList.contains('open')) {
+      closeDropdown();
+      toggle.focus();
+    }
+  });
 })();
 (function() {
   var slides = document.querySelectorAll('.page-hero-slideshow img');

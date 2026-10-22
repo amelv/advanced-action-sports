@@ -2,7 +2,7 @@
     {% assign page_path = page.url | remove_first: '/' | split: '/' | first %}
     <div class="noise-overlay"></div>
     <div class="header-inner">
-      <nav class="nav-left">
+      <nav class="nav-left" aria-label="Activities">
         <a href="{{ site.baseurl }}/airsoft/"{% if page_path == 'airsoft' %} class="active"{% endif %}>Airsoft</a>
         <a href="{{ site.baseurl }}/paintball/"{% if page_path == 'paintball' %} class="active"{% endif %}>Paintball</a>
         <a href="{{ site.baseurl }}/gel-blaster/"{% if page_path == 'gel-blaster' %} class="active"{% endif %}>Gel-Blaster</a>
@@ -11,11 +11,11 @@
       <a href="{{ site.baseurl }}/" class="logo">
         <img src="{{ site.baseurl }}/assets/images/logo-new-150@2x.webp" alt="Advanced Action Sports" width="200" height="200">
       </a>
-      <nav class="nav-right">
-        <a href="{{ site.baseurl }}/milsim/"{% if page_path == 'milsim' %} class="active"{% endif %}>Milsim</a>
-        <a href="{{ site.baseurl }}/event-space/"{% if page_path == 'event-space' %} class="active"{% endif %}>Event Space</a>
+      <nav class="nav-right" aria-label="Visitor links">
+        <a href="{{ site.baseurl }}/milsim/"{% if page_path == 'milsim' %} class="active"{% endif %}>Advanced Action Milsim</a>
+        <a href="{{ site.baseurl }}/tickets/"{% if page_path == 'tickets' %} class="active"{% endif %}>Tickets</a>
         <div class="nav-dropdown">
-          <a href="#">Visit</a>
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Visit</button>
           <div class="nav-dropdown-menu">
             <a href="{{ site.baseurl }}/memberships/"{% if page_path == 'memberships' %} class="active"{% endif %}>Memberships</a>
             <a href="https://advancedactionsports.square.site/s/appointments" target="_blank" rel="noreferrer noopener">Book a Party</a>
@@ -24,7 +24,7 @@
         </div>
         <a href="https://advancedactionsports.square.site/" target="_blank" rel="noreferrer noopener" class="nav-shop"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Shop</a>
       </nav>
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>

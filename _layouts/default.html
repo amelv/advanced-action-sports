@@ -309,6 +309,7 @@
     }
     .location-card .location-description { color: #e2e4e8; font-size: 16px; line-height: 1.55; margin-bottom: 16px; }
     .location-card .weather-widget { margin-top: 18px; min-height: 92px; }
+    .location-card .weather-fallback { display: inline-block; margin-top: 8px; color: #d7c4e8; font-size: 14px; text-decoration: underline; text-underline-offset: 2px; }
     .location-card .location-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 18px; }
     .location-card .location-actions .btn { padding: 9px 14px; font-size: 14px; }
 
@@ -722,7 +723,7 @@
     /* ========== MOBILE ========== */
     .menu-toggle {
       display: none; flex-direction: column; justify-content: center; gap: 5px;
-      width: 42px; height: 42px; padding: 10px;
+      width: 44px; height: 44px; padding: 10px;
       background: linear-gradient(to bottom, #4a4b50, #3a3b40);
       border: 1px solid #55565c; border-radius: 3px; cursor: pointer;
       align-self: start; margin-top: 28px;
@@ -743,7 +744,7 @@
     .drawer.open { transform: translateX(0); }
     .drawer-close {
       display: flex; align-items: center; justify-content: center;
-      width: 36px; height: 36px; margin-left: auto; margin-bottom: 20px;
+      width: 44px; height: 44px; margin-left: auto; margin-bottom: 20px;
       background: none; border: 1px solid #55565c; border-radius: 3px;
       color: #e2e4e8; font-size: 22px; cursor: pointer;
     }
@@ -789,6 +790,7 @@
       .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
       .content-row, .content-row.reversed { flex-direction: column; }
       .content-row .content-media { flex: 0 0 auto; width: 100%; max-width: 400px; margin: 0 auto; }
+      .content-float-left, .content-float-right { float: none; display: block; width: 100%; max-width: 400px; margin: 0 auto 20px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .hero-slideshow img, .video-thumbnail img { transition: none; }

@@ -64,9 +64,10 @@ og_url: "https://www.advancedactionsports.com"
 
         <div class="location-card">
           <h3>Webster, MA</h3>
-          <p class="hours-label">Walk in Hours are:</p>
+          <p class="location-description">Our home for weekly walk-in airsoft and paintball, parties, retail, and indoor VR.</p>
+          <p class="hours-label">Walk-in hours</p>
           <ul>
-            <li><em>(April 1st till the Wednesday before thanksgiving)</em></li>
+            <li><em>April 1 through the Wednesday before Thanksgiving</em></li>
             <li>Wednesday: 4 PM - 9 PM</li>
             <li>Saturday: 11 AM - 4 PM</li>
             <li>Sunday: 11 AM - 4 PM</li>
@@ -75,17 +76,34 @@ og_url: "https://www.advancedactionsports.com"
             109 Worcester Road, Webster, MA<br>
             Phone: 508-731-6300
           </div>
+          <div class="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/42d05n71d88/webster/?unit=us" data-label_1="WEBSTER" data-label_2="WEATHER" data-font="Heebo" data-icons="Climacons Animated" data-days="3" data-theme="dark">Webster weather forecast</a>
+          </div>
+          <a class="weather-fallback" href="https://forecast7.com/en/42d05n71d88/webster/?unit=us">Open Webster's full forecast</a>
+          <div class="location-actions">
+            <a class="btn btn-primary" href="https://advancedactionsports.square.site/shop/admission-for-webster-ma/9" target="_blank" rel="noreferrer noopener">Webster Tickets</a>
+            <a class="btn" href="airsoft/">Webster Airsoft</a>
+          </div>
         </div>
 
         <div class="location-card">
-          <h3><span class="new-tag">NEW!</span> Granville, MA</h3>
-          <p class="hours-label">Walk in Hours are:</p>
+          <h3>Granville, MA</h3>
+          <p class="location-description">A premium 400-acre destination built for easy navigation, immersive scenarios, and multi-day play at the biggest field in New England.</p>
+          <p class="hours-label">Hours</p>
           <ul>
-            <li>By appointment only</li>
+            <li>Special Events Only</li>
           </ul>
           <div class="address">
             553 West Hartland Rd, Granville, MA<br>
             Phone: 508-731-6300
+          </div>
+          <div class="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/42d07n72d86/granville/?unit=us" data-label_1="GRANVILLE" data-label_2="WEATHER" data-font="Heebo" data-icons="Climacons Animated" data-days="3" data-theme="dark">Granville weather forecast</a>
+          </div>
+          <a class="weather-fallback" href="https://forecast7.com/en/42d07n72d86/granville/?unit=us">Open Granville's full forecast</a>
+          <div class="location-actions">
+            <a class="btn btn-primary" href="https://advancedactionsports.square.site/shop/admissions-for-granville-ma/23" target="_blank" rel="noreferrer noopener">Granville Tickets</a>
+            <a class="btn" href="milsim/">Explore Granville</a>
           </div>
         </div>
 
@@ -93,9 +111,38 @@ og_url: "https://www.advancedactionsports.com"
     </div>
   </section>
 
-  <section style="background: #2a2b30; padding: 36px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.04);">
+  <section class="featured-video">
+    <div class="container featured-video-inner">
+      <a class="video-thumbnail" href="https://www.youtube.com/watch?v=-lGMwWLTdgw" target="_blank" rel="noreferrer noopener" aria-label="Watch Flying into Advanced Action Sports - Webster on YouTube">
+        <img src="assets/images/webster-flyover-video.jpg" alt="Aerial view of the Advanced Action Sports Webster field" loading="lazy">
+        <span class="video-play" aria-hidden="true">▶</span>
+      </a>
+      <div>
+        <h2>See Webster From Above</h2>
+        <p>Fly over the Webster field and get a look at the terrain, structures, and play area before your next visit.</p>
+        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=-lGMwWLTdgw" target="_blank" rel="noreferrer noopener">Watch the Video</a>
+        <a class="btn" href="https://www.youtube.com/@advancedactionsports6153/videos" target="_blank" rel="noreferrer noopener">More on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-preview">
+    <div class="container social-preview-inner">
+      <iframe class="facebook-preview" title="Recent posts from Advanced Action Sports on Facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fadvancedactionsports%2F&amp;tabs=timeline&amp;width=500&amp;height=500&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false" width="500" height="500" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
+      <div>
+        <h2>Follow the Action</h2>
+        <p>See recent field updates, event announcements, photos, and videos from Advanced Action Sports.</p>
+        <div class="social-preview-actions">
+          <a class="btn btn-primary" href="https://www.facebook.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">Follow on Facebook</a>
+          <a class="btn" href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener">Follow on Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-section">
     <div class="container">
-      <a href="mailto:contact@advancedactionsports.com?subject=Information Request" class="btn" style="font-size: 20px; padding: 14px 34px;">
+      <a href="mailto:contact@advancedactionsports.com?subject=Information Request" class="btn">
         EMAIL US
       </a>
     </div>
@@ -104,7 +151,7 @@ og_url: "https://www.advancedactionsports.com"
 <script>
 (function() {
   var slides = document.querySelectorAll('.hero-slideshow img');
-  if (slides.length < 2) return;
+  if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var current = 0;
   setInterval(function() {
     slides[current].classList.remove('active');
@@ -112,4 +159,7 @@ og_url: "https://www.advancedactionsports.com"
     slides[current].classList.add('active');
   }, 6000);
 })();
+</script>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';js.async=true;fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>

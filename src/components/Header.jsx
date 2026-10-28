@@ -13,10 +13,10 @@ export default function Header({ path = '/' }) {
           <a href="/nerf-battles/" className={active('nerf-battles')}>Nerf</a>
         </nav>
         <a href="/" className="logo">
-          <img src="/assets/images/logo-new-150@2x.webp" alt="Advanced Action Sports" width="200" height="200" />
+          <img src="/assets/images/logo-aas.webp" alt="Advanced Action Sports" width="180" height="180" />
         </a>
         <nav className="nav-right" aria-label="Visitor links">
-          <a href="/milsim/" className={active('milsim')}>Advanced Action Milsim</a>
+          <a href="/milsim/" className={active('milsim')}>Milsim</a>
           <a href="/tickets/" className={active('tickets')}>Tickets</a>
           <div className="nav-dropdown">
             <button type="button" className="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Visit</button>
@@ -24,6 +24,7 @@ export default function Header({ path = '/' }) {
               <a href="/memberships/" className={active('memberships')}>Memberships</a>
               <a href="https://advancedactionsports.square.site/s/appointments" target="_blank" rel="noreferrer noopener">Book a Party</a>
               <a href="https://waivermaster.com/sign.html?q=MQH6WTTY" target="_blank" rel="noreferrer noopener">Sign Waiver</a>
+              <a href="/partners/" className={active('partners')}>Partners &amp; Supporters</a>
             </div>
           </div>
           <a href="https://advancedactionsports.square.site/" target="_blank" rel="noreferrer noopener" className="nav-shop">

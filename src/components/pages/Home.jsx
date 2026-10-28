@@ -14,18 +14,18 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="container hero-inner">
           <h1>Leading Edge Gear and <span className="accent">Thrilling Experiences</span></h1>
-          <p>Our industry-leading facilities in Massachusetts offer Virtual Reality gaming, Airsoft, Paintball, Retail, Parties and Outings. Become a member and save!</p>
+          <p>Our industry-leading facilities in New England offer Virtual Reality gaming, Airsoft, Paintball, Retail, Parties and Outings. Become a member and save!</p>
           <div className="hero-ctas">
             <a href="https://advancedactionsports.square.site/s/appointments" className="btn btn-primary">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /><polygon points="12 13 13.5 16 16.5 16.5 14.25 18.75 15 22 12 20.5 9 22 9.75 18.75 7.5 16.5 10.5 16" /></svg>Book a Party
             </a>
-            <a href="/memberships/" className="btn">
+            <a href="/memberships/" className="btn btn-secondary">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="1" /></svg>Join the Fight Club
             </a>
-            <a href="/tickets/" className="btn">
+            <a href="/tickets/" className="btn btn-secondary">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 12a2 2 0 0 0 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 0 0-4V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 0-2 2Z" /><path d="M13 5v2M13 11v2M13 17v2" /></svg>Tickets
             </a>
-            <a href="https://waivermaster.com/sign.html?q=MQH6WTTY" className="btn">
+            <a href="https://waivermaster.com/sign.html?q=MQH6WTTY" className="btn btn-secondary">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>Sign Our Waiver
             </a>
           </div>
@@ -64,7 +64,8 @@ export default function Home() {
         <div className="container">
           <h2>Our Locations</h2>
           <div className="locations-grid">
-            <div className="location-card">
+            <div className="location-card location-card--webster">
+              <span className="location-badge">Walk-in play</span>
               <h3>Webster, MA</h3>
               <p className="location-description">Our home for weekly walk-in airsoft and paintball, parties, retail, and indoor VR.</p>
               <p className="hours-label">Walk-in hours</p>
@@ -78,14 +79,29 @@ export default function Home() {
                 109 Worcester Road, Webster, MA<br />
                 Phone: 508-731-6300
               </div>
-              <Weather lat="42.0496" lon="-71.8803" />
+              <aside className="location-aside" aria-label="Webster weather and map">
+                <Weather lat="42.0496" lon="-71.8803" />
+                <div className="location-map">
+                  <div className="location-map-frame">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2957!2d-71.8803!3d42.0496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s109%20Worcester%20Road%2C%20Webster%2C%20MA%2001570!5e0!3m2!1sen!2sus!4v1700000000000"
+                      title="Map of Advanced Action Sports in Webster, MA"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <a className="location-map-link" href="https://www.google.com/maps/search/?api=1&query=109%20Worcester%20Road%2C%20Webster%2C%20MA%2001570" target="_blank" rel="noreferrer noopener">Open in Google Maps</a>
+                </div>
+              </aside>
               <div className="location-actions">
                 <a className="btn btn-primary" href="https://advancedactionsports.square.site/shop/admission-for-webster-ma/9">Webster Tickets</a>
-                <a className="btn" href="/airsoft/">Webster Airsoft</a>
+                <a className="btn btn-secondary" href="/airsoft/">Webster Airsoft</a>
               </div>
             </div>
 
-            <div className="location-card">
+            <div className="location-card location-card--granville">
+              <span className="location-badge">Special events</span>
               <h3>Granville, MA</h3>
               <p className="location-description">A premium 400-acre destination built for easy navigation, immersive scenarios, and multi-day play at the biggest field in New England.</p>
               <p className="hours-label">Hours</p>
@@ -96,13 +112,28 @@ export default function Home() {
                 553 West Hartland Rd, Granville, MA<br />
                 Phone: 508-731-6300
               </div>
-              <Weather lat="42.0668" lon="-72.8626" />
+              <aside className="location-aside" aria-label="Granville weather and map">
+                <Weather lat="42.0668" lon="-72.8626" />
+                <div className="location-map">
+                  <div className="location-map-frame">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000!2d-72.8626!3d42.0668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s553%20West%20Hartland%20Road%2C%20Granville%2C%20MA%2001034!5e0!3m2!1sen!2sus!4v1700000000000"
+                      title="Map of Advanced Action Sports in Granville, MA"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <a className="location-map-link" href="https://www.google.com/maps/search/?api=1&query=553%20West%20Hartland%20Road%2C%20Granville%2C%20MA%2001034" target="_blank" rel="noreferrer noopener">Open in Google Maps</a>
+                </div>
+              </aside>
               <div className="location-actions">
                 <a className="btn btn-primary" href="https://advancedactionsports.square.site/shop/admissions-for-granville-ma/23">Granville Tickets</a>
-                <a className="btn" href="/milsim/">Explore Granville</a>
+                <a className="btn btn-secondary" href="/milsim/">Explore Granville</a>
               </div>
             </div>
           </div>
+          <p className="locations-reviews"><a href="https://share.google/q4IDuravs8KJHpRfX" target="_blank" rel="noreferrer noopener">Read our Google reviews</a></p>
         </div>
       </section>
 
@@ -137,7 +168,7 @@ export default function Home() {
 
       <section className="email-section">
         <div className="container">
-          <a href="mailto:contact@advancedactionsports.com?subject=Information Request" className="btn">EMAIL US</a>
+          <a href="mailto:contact@advancedactionsports.com?subject=Information Request" className="btn btn-primary">EMAIL US</a>
         </div>
       </section>
     </>

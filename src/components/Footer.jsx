@@ -5,7 +5,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <h2>Advanced Action Sports, LLC</h2>
-            <p>Two locations serving Massachusetts</p>
+            <p>Two locations serving New England</p>
+            <p className="footer-review-link"><a href="https://share.google/q4IDuravs8KJHpRfX" target="_blank" rel="noreferrer noopener">Read our Google reviews</a></p>
           </div>
           <div className="footer-location">
             <h3>Webster, MA</h3>

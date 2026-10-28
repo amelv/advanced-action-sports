@@ -13,7 +13,7 @@ export default function Home() {
         </div>
         <div className="hero-overlay"></div>
         <div className="container hero-inner">
-          <h1>Leading Edge Gear and Thrilling Experiences</h1>
+          <h1>Leading Edge Gear and <span className="accent">Thrilling Experiences</span></h1>
           <p>Our industry-leading facilities in Massachusetts offer Virtual Reality gaming, Airsoft, Paintball, Retail, Parties and Outings. Become a member and save!</p>
           <div className="hero-ctas">
             <a href="https://advancedactionsports.square.site/s/appointments" className="btn btn-primary">
@@ -109,14 +109,14 @@ export default function Home() {
       <section className="featured-video">
         <div className="container featured-video-inner">
           <a className="video-thumbnail" href="https://www.youtube.com/watch?v=-lGMwWLTdgw" target="_blank" rel="noreferrer noopener" aria-label="Watch Flying into Advanced Action Sports - Webster on YouTube">
-            <img src="/assets/images/webster-flyover-video.jpg" alt="Aerial view of the Advanced Action Sports Webster field" loading="lazy" />
+            <img src="/assets/images/airsoft-arena-drone-overview.avif" alt="Aerial view of the Advanced Action Sports Webster field" loading="lazy" />
             <span className="video-play" aria-hidden="true">▶</span>
           </a>
           <div>
             <h2>See Webster From Above</h2>
             <p>Fly over the Webster field and get a look at the terrain, structures, and play area before your next visit.</p>
             <a className="btn btn-primary" href="https://www.youtube.com/watch?v=-lGMwWLTdgw">Watch the Video</a>
-            <a className="btn" href="https://www.youtube.com/@advancedactionsports6153/videos">More on YouTube</a>
+            <a className="btn btn-secondary" href="https://www.youtube.com/@advancedactionsports6153/videos">More on YouTube</a>
           </div>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function Home() {
             <p>See recent field updates, event announcements, photos, and videos from Advanced Action Sports.</p>
             <div className="social-preview-actions">
               <a className="btn btn-primary" href="https://www.facebook.com/advancedactionsports/">Follow on Facebook</a>
-              <a className="btn" href="https://www.instagram.com/advancedactionsports/">Follow on Instagram</a>
+              <a className="btn btn-secondary" href="https://www.instagram.com/advancedactionsports/">Follow on Instagram</a>
             </div>
           </div>
         </div>

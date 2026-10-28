@@ -1,0 +1,55 @@
+export default function Footer() {
+  return (
+    <footer>
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <h2>Advanced Action Sports, LLC</h2>
+            <p>Two locations serving Massachusetts</p>
+          </div>
+          <div className="footer-location">
+            <h3>Webster, MA</h3>
+            <p>
+              109 Worcester Rd.<br />
+              Webster, MA 01570<br />
+              (508) 731-6300
+            </p>
+          </div>
+          <div className="footer-location">
+            <h3>Granville, MA</h3>
+            <p>
+              553 W. Hartland Rd.<br />
+              Granville, MA 01034<br />
+              (508) 731-6300
+            </p>
+          </div>
+          <div className="footer-buttons">
+            <a href="mailto:contact@advancedactionsports.com?subject=Information Request" className="btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg> Email Us
+            </a>
+            <a href="/memberships/" className="btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="1" /></svg> Memberships
+            </a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span className="copyright">Copyright 2026 / Trademark - Advanced Action Sports, LLC / <a href="/jobs/" className="footer-jobs-link">We're hiring!</a></span>
+          <div className="social-links">
+            <a href="https://www.facebook.com/advancedactionsports/" target="_blank" rel="noreferrer noopener" aria-label="Facebook">
+              <img src="/assets/images/facebook.webp" alt="" />
+            </a>
+            <a href="https://www.instagram.com/advancedactionsports/" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+              <img src="/assets/images/instagram.webp" alt="" />
+            </a>
+            <a href="https://www.tiktok.com/@advancedactionsports" target="_blank" rel="noreferrer noopener" aria-label="TikTok">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16.6 5.8a6.8 6.8 0 0 0 4 1.3v3.2a10 10 0 0 1-4-1v6.1a6.4 6.4 0 1 1-5.5-6.3v3.3a3.2 3.2 0 1 0 2.3 3V2h3.2v3.8Z" /></svg>
+            </a>
+            <a href="https://www.youtube.com/@advancedactionsports6153/videos" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

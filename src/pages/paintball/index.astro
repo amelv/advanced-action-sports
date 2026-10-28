@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.jsx';
+import Gallery from '../../components/Gallery.jsx';
+const gallery = [{"src": "paintball-splatter-action.avif", "alt": "Bright colorful paintball action with paint splattering around a barricade as a player fires back"}, {"src": "paintball-player-running.avif", "alt": "Young paintball player running across the field in a moody action profile shot during a match"}, {"src": "paintball-team-victory.avif", "alt": "Paintball team grouped together in full gear waving markers and fists in victory celebration"}, {"src": "paintball-team-portrait.avif", "alt": "Paintball team posing together in full tactical gear for a group portrait"}, {"src": "paintball-woman-crouching-barricade.avif", "alt": "Woman paintball player crouching behind a barricade looking for an opening to shoot"}];
+---
+<BaseLayout
+  title="PAINTBALL | Advanced Action Sports"
+  description="Paintball at Advanced Action Sports in Webster, Massachusetts. Fast-paced paintball battles, scenario games, and open play for all skill levels. Rentals available."
+  canonical="https://www.advancedactionsports.com/paintball/"
+  ogTitle="PAINTBALL | Advanced Action Sports"
+  ogDescription="Paintball at Advanced Action Sports in Webster, Massachusetts. Fast-paced paintball battles, scenario games, and open play for all skill levels. Rentals available."
+>
+<PageHero title="PAINTBALL" btnUrl="https://advancedactionsports.square.site/s/search?q=paintball%20admission" btnText="Book Now" bgImg="paintball-splatter-action.avif" bgAlt="Bright colorful paintball action with paint splattering around a barricade as a player fires back at an opponent" />
+
+  <section class="page-actions">
+    <div class="container">
+      <a href="https://waivermaster.com/sign.html?q=MQH6WTTY" class="btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Sign Waiver</a>
+      <a href="/documents/2022rulesAdvanced.pdf" class="btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>View Rules</a>
+      <a href="/paintball-faq/" class="btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</a>
+      
+      <a href="https://advancedactionsports.square.site/s/shop" class="btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Shop Paintball Gear</a>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <h2>Fast. Loud. Unforgettable.</h2>
+      <p>Paintball at Advanced Action Sports is where strategy meets adrenaline. Whether you're a first-timer or a seasoned veteran, our indoor and outdoor fields offer the perfect arena for high-speed combat. Feel the rush of paint flying past as you communicate, flank, and push toward victory with your team.</p>
+
+      <h2>Gear &amp; Rentals</h2>
+      <p>We stock everything you need. Our rental markers are reliable, accurate, and maintained after every session. Paint is sold by the bag or case, and we offer multiple grades to match your play style. Bring your own marker and paint — just check in with our staff for chrono and field rules. Air tank fills are included with admission.</p>
+
+      <div class="content-image"><img src="/assets/images/paintball-player-running.avif" alt="Young paintball player running across the field in a moody action profile shot during a match" loading="lazy"></div>
+
+      <h2>Game Modes</h2>
+      <p>From classic elimination and capture-the-flag to team deathmatch and scenario games, our refs keep the action fresh. We rotate game modes throughout the day so every session feels different. Weekend open plays often feature themed scenarios — zombie hunts, bomb defusal, and VIP escort missions.</p>
+
+      <h2>Birthday Parties &amp; Groups</h2>
+      <p>Paintball parties are our specialty. We handle everything: gear, paint, a private party host, and a dedicated field rotation so your group stays together. Add food, cake, and extended play time to build the ultimate party package. Corporate team-building groups love paintball for its communication-driven gameplay.</p>
+
+      <h2 style="clear: both;">Photos</h2>
+      <Gallery images={gallery} />
+    </div>
+  </section>
+</BaseLayout>

@@ -2,3 +2,7 @@ _site/
 *.bak
 *.bak2
 assets/images/reference/
+node_modules/
+dist/
+.astro/
+reference/

@@ -11,7 +11,7 @@ This is a short working list based on `Oct2Meeting.txt`. The estimates are rough
 | Reduce Moose Valley prominence | Shrink its picture/content. Moose Valley is a different business; retain some representation while making Advanced Action Sports clearer. | 1–2 h |
 | Update Granville listing | Remove “New” and change walk-in hours to “Special Events Only.” | 0.5–1 h |
 | Add social links/tabs | Add TikTok and YouTube alongside Facebook and Instagram. | 0.5–1.5 h |
-| Add Partners & Supporters | Include the named sponsors/teams: Amped Airsoft, MSATO Milsim, StagOps, UBG, Brothers of Chaos, Daggers/ATS, Xtreme Paintball, RPS, and Extreme Airsoft. | 2–4 h |
+| Add Partners & Supporters | Include the named sponsors/teams: Amped Airsoft, MSATO Milsim, StagOps, UBG, Brothers of Chaos, Daggers/ATS, Xtreme Paintball & Airsoft (Agawam, MA), and RPS. Extreme Airsoft (RI) is not a backer and was removed. | 2–4 h |
 
 **Priority 1 subtotal: about 5–11 hours.** Partner logo gathering and approval are not included.
 

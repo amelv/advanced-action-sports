@@ -489,6 +489,8 @@
       background: #f4f1f7; border-radius: 6px;
     }
     .partner-logo img { max-width: 100%; max-height: 72px; width: auto; height: auto; object-fit: contain; }
+    .partner-logo--dark { height: 132px; background: #0b0a0d; }
+    .partner-logo--dark img { max-height: 120px; }
     .partner-wordmark {
       display: flex; align-items: center; justify-content: center;
       min-height: 96px; padding: 14px;
